@@ -61,6 +61,7 @@ public class LauncherFragment extends Fragment {
             this.resolveInfo = resolveInfo;
             PackageManager packageManager = getActivity().getPackageManager();
             binding.labelActivity.setText(resolveInfo.loadLabel(packageManager).toString());
+            binding.iconOfActivity.setImageDrawable(resolveInfo.loadIcon(packageManager));
         }
 
         @Override
